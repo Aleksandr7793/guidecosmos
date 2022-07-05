@@ -14,6 +14,7 @@ sudo systemctl stop strided
 strided tendermint unsafe-reset-all --home $HOME/.stride
 
 external_address=$(wget -qO- eth0.me)
+
 peers="c73d5d83ae121dd9f2ebbfd381724c844a5e5106@stride-node1.poolparty.stridenet.co:26656"
 sed -i.bak -e "s/^external_address *=.*/external_address = \"$external_address:26656\"/; s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.stride/config/config.toml
 
