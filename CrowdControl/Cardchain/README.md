@@ -11,7 +11,7 @@ To install, you just need to take the script and go through the installation ord
 ```
 sudo systemctl stop Cardchain
 Cardchain unsafe-reset-all
-SEEDS=""
+SEEDS="df1f6617ff5acdc85d9daa890300a57a9d956e5e@sei-atlantic-1.seed.rhinostake.com:16660"
 PEERS="407fd08d831eaec4be840bf762740a72c5c48ea6@159.69.11.174:36656,a506820ea90c5b0ddb9005ef720a121e9f6bbaeb@45.136.28.158:26658"; \
 sed -i.bak -e "s/^seeds *=.*/seeds = \"$SEEDS\"/; s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" $HOME/.Cardchain/config/config.toml
 SNAP_RPC="http://159.69.11.174:36657"
